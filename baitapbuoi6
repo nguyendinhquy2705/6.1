@@ -1,1 +1,124 @@
+package baitap;
 
+import java.util.Scanner;
+import java.util.Random;
+
+public class BaiTapBuoi6 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Random rd = new Random();
+
+        int winUser = 0, winCom = 0, draw = 0;
+        while (true) {
+            System.out.println("\n1. Bao");
+            System.out.println("2. Keo");
+            System.out.println("3. Bua");
+            System.out.print("Nhap lua chon (1-3): ");
+            int user = sc.nextInt();
+            int com = rd.nextInt(3) + 1;
+            System.out.println("May chon: " + com);
+            if (user == com) {
+                System.out.println("Hoa!");
+                draw++;
+            } else if ((user == 1 && com == 2) || (user == 2 && com == 3) || (user == 3 && com == 1)) {
+                System.out.println("Ban thang!");
+                winUser++;
+            } else {
+                System.out.println("May thang!");
+                winCom++;
+            }
+            System.out.print("Nhap so khac 0 de choi tiep, nhap 0 de dung: ");
+            int stop = sc.nextInt();
+            if (stop == 0) break;
+        }
+
+        System.out.println("\n===== KET QUA =====");
+        System.out.println("Ban thang: " + winUser);
+        System.out.println("May thang: " + winCom);
+        System.out.println("Hoa: " + draw);
+
+        if (winUser > winCom) {
+            System.out.println("Nguoi choi thang nhieu hon!");
+        } else if (winCom > winUser) {
+            System.out.println("May thang nhieu hon!");
+        } else {
+            System.out.println("Hai ben bang nhau!");
+        }
+    }
+}
+//bai2:
+	class Bai2 {
+    public static void main(String[] args) {
+
+        int sum = 0;
+        int n = 0;
+
+        while (sum <= 10000) {
+            n++;
+            sum += n;
+        }
+
+        System.out.println("n nho nhat la: " + n);
+        System.out.println("Tong = " + sum);
+    }
+}
+//bai 3:
+		class Bai3 {
+	    public static void main(String[] args) {
+	        Scanner sc = new Scanner(System.in);
+	        int n;
+
+	        do {
+	            System.out.print("Nhap n > 0: ");
+	            n = sc.nextInt();
+	        } while (n <= 0);
+
+	        int sum =0;
+
+	        for (int i = 1; i < n; i += 2) {
+	            sum += i;
+	        }
+
+	        System.out.println("Tong so le = " + sum);
+	    }
+	}
+//bai 4:
+	class Bai4 {
+	public static double power(double x, int n) {
+		double result = 1;
+		for (int i = 1; i <= n; i++) {
+		    result *= x;
+		}
+		    return result;
+		}
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Nhap x: ");
+			double x = sc.nextDouble();
+		System.out.print("Nhap n: ");
+		    int n = sc.nextInt();
+		    double sum = 0;
+		    for (int i = 1; i <= n; i++) {
+		            sum += power(x, i);
+		        }
+		        System.out.println("S(n) = " + sum);
+		    }
+		}
+//bai 5:
+	class Bai5 {
+	public static void main(String[] args) {
+	 Scanner sc = new Scanner(System.in);
+	System.out.print("Nhap so tien gui: ");
+	double tien = sc.nextDouble();
+	System.out.print("Nhap so tien muon co: ");
+	double mucTieu = sc.nextDouble();
+	System.out.print("Nhap lai suat (%/nam): ");
+	 double lai = sc.nextDouble();
+	        int nam =0;
+	        while (tien < mucTieu) {
+	            tien = tien + tien * lai /100;
+	            nam++;
+	        }
+	        System.out.println("So nam can cho: " + nam);
+	    }
+	}
