@@ -1,0 +1,92 @@
+package baitap;
+
+import java.util.Scanner;
+
+public class BaiTapBuoi61 {
+	    public static void main(String[] args) {
+	        System.out.println("So chan < 100: ");
+	        for (int i = 2; i < 100; i += 2) {
+	            System.out.print(i + " ");
+	        }
+	        System.out.println("\n\nSo le < 100: ");
+	        int j = 1;
+	        while (j < 100) {
+	            System.out.print(j + " ");
+	            j += 2;
+	        }
+	        System.out.println("\n\nSo chan < 100: ");
+	        for (int k = 1; k < 100; k++) {
+	            if (k % 2 == 0) {
+	                System.out.print(k + " ");
+	            }
+	        }
+	        System.out.println("\n\nSo le < 100: ");
+	        int m = 1;
+	        while (m < 100) {
+	            if (m % 2 != 0) {
+	                System.out.print(m + " ");
+	            }
+	            m++;
+	        }
+	    }
+	}
+// bai2 for:
+class Bai2_For {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Nhap n: ");
+        int n = sc.nextInt();
+        int sum = 0;
+        for (int i = 2; i <= n; i += 2) {
+            sum += i;
+        }
+        System.out.println("Tong so chan = " + sum);
+    }
+}
+
+// bai2 while:
+class Bai2_While {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Nhap n: ");
+        int n = sc.nextInt();
+        int sum = 0;
+        int i = 2;
+
+        while (i <= n) {
+            sum += i;
+            i += 2;
+        }
+        System.out.println("Tong so chan = " + sum);
+    }
+}
+//bai3:
+	class Bai3_For {
+    public static void main(String[] args) {
+        int count = 0;
+
+        for (int i = 0; i <= 1000; i++) {
+            if (i % 3 == 0) {
+                count++;
+            }
+        }
+
+        System.out.println("So chia het cho 3: " + count);
+    }
+}
+	class Bai3_While {
+    public static void main(String[] args) {
+        int i = 0;
+        int count = 0;
+
+        while (i <= 1000) {
+            if (i % 3 == 0) {
+                count++;
+            }
+            i++;
+        }
+
+        System.out.println("So chia het cho 3: " + count);
+    }
+}
+
